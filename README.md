@@ -66,7 +66,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-Demo: https://drive.google.com/open?id=0B91HXo7i_c8TYVQyRHNEYkFoNnM
+<img src='https://www.dropbox.com/s/636fvf49w8vgogt/demo.mp4?dl=0' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 ## Notes
