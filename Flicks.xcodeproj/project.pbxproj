@@ -21,6 +21,7 @@
 		F7AA30501E8FB62000541860 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AA304F1E8FB62000541860 /* MovieDetailViewController.swift */; };
 		F7AA30521E90A1A100541860 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7AA30511E90A1A100541860 /* Assets.xcassets */; };
 		F7AA30561E9105E800541860 /* NowPlayingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AA30551E9105E800541860 /* NowPlayingTableViewCell.swift */; };
+		F7AA30581E91D11600541860 /* TrailerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AA30571E91D11600541860 /* TrailerCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		F7AA304F1E8FB62000541860 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		F7AA30511E90A1A100541860 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7AA30551E9105E800541860 /* NowPlayingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowPlayingTableViewCell.swift; sourceTree = "<group>"; };
+		F7AA30571E91D11600541860 /* TrailerCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailerCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,9 +136,10 @@
 			isa = PBXGroup;
 			children = (
 				F7AA30511E90A1A100541860 /* Assets.xcassets */,
-				F7AA30111E8EC0DE00541860 /* AppDelegate.swift */,
 				F7AA30131E8EC0DE00541860 /* NowPlayingController.swift */,
+				F7AA30111E8EC0DE00541860 /* AppDelegate.swift */,
 				F7AA30551E9105E800541860 /* NowPlayingTableViewCell.swift */,
+				F7AA30571E91D11600541860 /* TrailerCollectionViewController.swift */,
 				F7AA30151E8EC0DE00541860 /* TopRatedController.swift */,
 				F7AA30171E8EC0DE00541860 /* Main.storyboard */,
 				F7AA304F1E8FB62000541860 /* MovieDetailViewController.swift */,
@@ -359,6 +362,7 @@
 				F7AA30121E8EC0DE00541860 /* AppDelegate.swift in Sources */,
 				F7AA30501E8FB62000541860 /* MovieDetailViewController.swift in Sources */,
 				F7AA30141E8EC0DE00541860 /* NowPlayingController.swift in Sources */,
+				F7AA30581E91D11600541860 /* TrailerCollectionViewController.swift in Sources */,
 				F7AA30481E8F533600541860 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

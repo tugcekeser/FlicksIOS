@@ -17,56 +17,71 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="220" sectionHeaderHeight="28" sectionFooterHeight="28" id="GFS-DH-gNM">
-                                <rect key="frame" x="0.0" y="80" width="414" height="576"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="266" sectionHeaderHeight="28" sectionFooterHeight="28" id="GFS-DH-gNM">
+                                <rect key="frame" x="0.0" y="54" width="414" height="635"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="contentInset" minX="0.0" minY="5" maxX="0.0" maxY="15"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NowPlayingTableViewCell" rowHeight="220" id="0go-dY-rSK" customClass="NowPlayingTableViewCell" customModule="Flicks">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="220"/>
-                                        <autoresizingMask key="autoresizingMask"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NowPlayingTableViewCell" rowHeight="275" id="0go-dY-rSK" customClass="NowPlayingTableViewCell" customModule="Flicks">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="275"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0go-dY-rSK" id="ZUC-qW-cDk">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="219.66666666666666"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="275"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="jKU-6K-Z9f">
-                                                    <rect key="frame" x="0.0" y="0.0" width="420" height="220"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="jKU-6K-Z9f">
+                                                    <rect key="frame" x="26" y="0.0" width="362" height="220"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <visualEffectView opaque="NO" contentMode="scaleToFill" misplaced="YES" id="a08-2V-d7J">
-                                                    <rect key="frame" x="0.0" y="175" width="414" height="45"/>
+                                                <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" id="a08-2V-d7J">
+                                                    <rect key="frame" x="25" y="165" width="363" height="65"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="x1H-sk-sOs">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="45"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="363" height="65"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lya-3a-7MZ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="523" height="36"/>
-                                                                <autoresizingMask key="autoresizingMask"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
                                                     </view>
                                                     <blurEffect style="light"/>
                                                 </visualEffectView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lya-3a-7MZ">
+                                                    <rect key="frame" x="36" y="152" width="352" height="57"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="star" id="LNC-hW-8vH">
+                                                    <rect key="frame" x="29" y="192" width="25" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="8.2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zkm-Gg-Ckm">
+                                                    <rect key="frame" x="64" y="197" width="80" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="41v-JD-eZ6">
+                                                    <rect key="frame" x="284" y="90" width="95" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="accessoryView" destination="Lya-3a-7MZ" id="qQi-kT-YvB"/>
                                             <outlet property="movieImage" destination="jKU-6K-Z9f" id="BaU-74-biR"/>
-                                            <outlet property="movieTitle" destination="Lya-3a-7MZ" id="23u-7E-5Bb"/>
+                                            <outlet property="moviePosterImage" destination="41v-JD-eZ6" id="S8q-Mu-dKj"/>
+                                            <outlet property="movieRating" destination="zkm-Gg-Ckm" id="JhU-9B-wUW"/>
+                                            <outlet property="movieTitle" destination="Lya-3a-7MZ" id="h36-kD-w1v"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <sections/>
                                 <connections>
                                     <outlet property="dataSource" destination="9pv-A4-QxB" id="3Sk-nG-1XW"/>
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="nSd-wx-9Uy"/>
                                 </connections>
                             </tableView>
-                            <collectionView hidden="YES" autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="Ni9-6E-yqW">
+                            <collectionView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="Ni9-6E-yqW">
                                 <rect key="frame" x="0.0" y="113" width="414" height="576"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -125,18 +140,35 @@
                                 <rect key="frame" x="20" y="77" width="374" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="List"/>
                                     <segment title="Grid"/>
+                                    <segment title="List"/>
                                 </segments>
                                 <connections>
                                     <action selector="indexChanged:" destination="9pv-A4-QxB" eventType="valueChanged" id="sty-un-mjf"/>
                                 </connections>
                             </segmentedControl>
+                            <view contentMode="scaleToFill" misplaced="YES" id="ADc-bH-1Wc">
+                                <rect key="frame" x="0.0" y="640" width="414" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please check your network connection!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jl8-Yy-p3J">
+                                        <rect key="frame" x="26" y="14" width="366" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Now Playing" id="nJl-Tq-HJN" colorLabel="IBBuiltInLabel-Purple"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="736"/>
                     <connections>
+                        <outlet property="ErrorView" destination="ADc-bH-1Wc" id="d8c-HU-451"/>
                         <outlet property="nowPlayingCollection" destination="Ni9-6E-yqW" id="JS4-8u-JDr"/>
                         <outlet property="nowPlayingTableView" destination="GFS-DH-gNM" id="ogQ-ck-yrX"/>
                         <outlet property="segmentedControl" destination="3fo-6q-yKG" id="vDU-7B-RnB"/>
@@ -155,7 +187,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="wLZ-TM-xoY">
-                                <rect key="frame" x="0.0" y="68" width="414" height="618"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="630"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" id="rIq-yb-KR1">
@@ -163,14 +195,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" misplaced="YES" id="ynQ-hZ-f12">
-                                        <rect key="frame" x="17" y="441" width="380" height="338"/>
+                                        <rect key="frame" x="17" y="441" width="389" height="338"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" id="BhM-jo-h0w">
-                                                <rect key="frame" x="-6" y="-6" width="380" height="338"/>
+                                                <rect key="frame" x="-6" y="-6" width="387" height="338"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="X3g-UY-P2F">
-                                                    <rect key="frame" x="0.0" y="0.0" width="380" height="338"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="387" height="338"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tp6-Tl-JPQ">
@@ -195,7 +227,7 @@
                                                             <rect key="frame" x="153" y="46" width="17" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="C8P-ZB-Txc">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="C8P-ZB-Txc">
                                                             <rect key="frame" x="172" y="44" width="42" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -243,9 +275,12 @@
                     <navigationItem key="navigationItem" id="26c-Fb-acY"/>
                     <connections>
                         <outlet property="backdropImage" destination="wLZ-TM-xoY" id="nvW-yn-YLn"/>
+                        <outlet property="movieDate" destination="C8P-ZB-Txc" id="PBt-bW-d3p"/>
                         <outlet property="movieInfoView" destination="ynQ-hZ-f12" id="FkW-Vv-baG"/>
+                        <outlet property="movieLanguage" destination="r30-fG-TBx" id="qLd-cY-Dhl"/>
                         <outlet property="movieOverview" destination="RMj-Fl-mdW" id="dUv-Q5-WMx"/>
                         <outlet property="movieTitle" destination="tp6-Tl-JPQ" id="B7a-An-OXU"/>
+                        <outlet property="movieVotingRate" destination="raQ-co-shl" id="6vW-xf-au2"/>
                         <outlet property="posterImage" destination="6Sc-JL-DQF" id="8oZ-sK-wi3"/>
                         <outlet property="scrollView" destination="rIq-yb-KR1" id="p8H-5d-o86"/>
                     </connections>
@@ -253,6 +288,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UUa-LE-efU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1689" y="-280"/>
+        </scene>
+        <!--Trailer Collection View Controller-->
+        <scene sceneID="sdb-Gl-UL4">
+            <objects>
+                <viewController id="3Pn-Vx-Ble" customClass="TrailerCollectionViewController" customModule="Flicks" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Biu-Hr-3SH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" misplaced="YES" id="Hvl-oM-Rza">
+                                <rect key="frame" x="0.0" y="255" width="414" height="245"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="3Pn-Vx-Ble" id="JYE-8t-Kho"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="youtubePlayer" destination="Hvl-oM-Rza" id="SDh-6Z-bOY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TdH-V6-Pxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2313" y="-270"/>
         </scene>
         <!--Top Rated-->
         <scene sceneID="wg7-f3-ORb">
@@ -280,6 +342,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="125" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" restorationIdentifier="ivPoster" id="bwd-YS-5IC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="125" height="180"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                                 <visualEffectView opaque="NO" contentMode="scaleToFill" misplaced="YES" id="SNj-n1-ksM">
                                                     <rect key="frame" x="0.0" y="147" width="131" height="33"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -298,10 +364,6 @@
                                                     </view>
                                                     <blurEffect style="light"/>
                                                 </visualEffectView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" restorationIdentifier="ivPoster" id="bwd-YS-5IC">
-                                                    <rect key="frame" x="0.0" y="0.0" width="125" height="180"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                             </subviews>
                                         </view>
                                         <connections>
@@ -317,8 +379,8 @@
                                 <rect key="frame" x="20" y="77" width="374" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="List"/>
                                     <segment title="Grid"/>
+                                    <segment title="List"/>
                                 </segments>
                             </segmentedControl>
                         </subviews>

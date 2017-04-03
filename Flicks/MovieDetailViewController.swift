@@ -8,12 +8,16 @@
 
 import UIKit
 
+
 class MovieDetailViewController: UIViewController{
 
     @IBOutlet weak var movieInfoView: UIView!
     @IBOutlet weak var movieTitle: UILabel!
     @IBOutlet weak var backdropImage: UIImageView!
+    @IBOutlet weak var movieVotingRate: UILabel!
    
+    @IBOutlet weak var movieLanguage: UILabel!
+    @IBOutlet weak var movieDate: UILabel!
     @IBOutlet weak var posterImage: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var movieOverview: UILabel!
@@ -27,7 +31,9 @@ class MovieDetailViewController: UIViewController{
         movieInfoView.alpha=1.6
         scrollView.contentSize = CGSize(width: scrollView.frame.size.width,
             height: movieInfoView.frame.origin.y + movieInfoView.frame.size.height)
-       // posterImage.sizeToFit()
+        movieVotingRate.text=NSString(format: "%.1f", movie.voteAverage!) as String
+       // movieLanguage.text=movie.originalLanguage
+       
         setBackgroundImage()
         setTrailerImage()
 

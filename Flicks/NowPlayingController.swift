@@ -12,6 +12,7 @@ import MBProgressHUD
 
 class NowPlayingController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UISearchControllerDelegate, UISearchBarDelegate, UISearchResultsUpdating,UITableViewDelegate,UITableViewDataSource  {
     
+    @IBOutlet weak var ErrorView: UIView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var nowPlayingTableView: UITableView!
     @IBOutlet weak var nowPlayingCollection: UICollectionView!
@@ -19,6 +20,7 @@ class NowPlayingController: UIViewController,UICollectionViewDelegate,UICollecti
     var refreshControl:UIRefreshControl!
     var nowPlayingMovies = [Movie]()
     var filteredNowPlayingMovies=[Movie]()
+    var list=false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +39,7 @@ class NowPlayingController: UIViewController,UICollectionViewDelegate,UICollecti
             //UIColor(red: 141/255, green: 136/255, blue: 230/255, alpha: 1)
             //UIColor(red: 68/255, green: 146/255, blue: 159/255, alpha: 1)
         
-        segmentedControl.tintColor = UIColor(red: 164/255, green: 204/255, blue: 203/255, alpha: 1)
+        //segmentedControl.tintColor = UIColor(red: 164/255, green: 204/255, blue: 203/255, alpha: 1)
         //UIColor(red: 141/255, green: 136/255, blue: 230/255, alpha: 1)
             //UIColor(red: 255/255, green: 214/255, blue: 112/255, alpha: 1)
         
@@ -48,6 +50,9 @@ class NowPlayingController: UIViewController,UICollectionViewDelegate,UICollecti
         
         fetchNowPlayingMovies(refreshControl)
         setActionBarOnTop()
+        nowPlayingTableView.isHidden=true
+        nowPlayingCollection.isHidden=false
+        ErrorView.isHidden=true
         
     }
     
@@ -55,11 +60,13 @@ class NowPlayingController: UIViewController,UICollectionViewDelegate,UICollecti
         switch segmentedControl.selectedSegmentIndex
         {
         case 0:
-            nowPlayingTableView.isHidden=false
-            nowPlayingCollection.isHidden=true;
-        case 1:
             nowPlayingTableView.isHidden=true
-            nowPlayingCollection.isHidden=false;
+            nowPlayingCollection.isHidden=false
+            list=false;
+        case 1:
+            nowPlayingTableView.isHidden=false
+            nowPlayingCollection.isHidden=true
+            list=true;
         default:
             break
         }
@@ -140,10 +147,31 @@ class NowPlayingController: UIViewController,UICollectionViewDelegate,UICollecti
                                           
         failure: { (imageRequest, imageResponse, error) -> Void in
         })
+        
+        let urlImagePoster=filteredNowPlayingMovies[indexPath.item].posterImageUrl!
+        let imageRequestPoster = URLRequest(url: urlImagePoster)
+        cell.moviePosterImage.setImageWith(imageRequestPoster, placeholderImage: nil, success: { (imageRequestPoster, imageResponse, image) -> Void in
+            if imageResponse != nil {
+                print("image was NOT cached, fade in")
+                cell.moviePosterImage.alpha = 0.0
+                cell.moviePosterImage.image = image
+                cell.moviePosterImage.clipsToBounds = true
+                cell.moviePosterImage.layer.cornerRadius = 5;
+                UIView.animate(withDuration: 0.7, animations: { () -> Void in
+                    cell.moviePosterImage.alpha = 1.0
+                })
+            } else {
+                print ("image was cached")
+                cell.moviePosterImage.image = image
+            }
+        },
+                                     
+                                     failure: { (imageRequest, imageResponse, error) -> Void in
+        })
+        
         cell.movieTitle.text=filteredNowPlayingMovies[indexPath.item].title!
-       
-     
-
+        cell.movieRating.text=NSString(format: "%.1f", filteredNowPlayingMovies[indexPath.item].voteAverage!) as String
+    
         return cell
     }
 
@@ -197,7 +225,7 @@ class NowPlayingController: UIViewController,UICollectionViewDelegate,UICollecti
         
         let task : URLSessionDataTask = session.dataTask(with: request,completionHandler: { (dataOrNil, response, error) in
             if let data = dataOrNil {
-              
+                self.ErrorView.isHidden=true
                 if let responseDictionary = try! JSONSerialization.jsonObject(with: data, options:[]) as? NSDictionary {
                 
                     if let results = responseDictionary.value(forKeyPath: "results") as? [NSDictionary] {
@@ -223,24 +251,33 @@ class NowPlayingController: UIViewController,UICollectionViewDelegate,UICollecti
                     
                     }
                 }
+                self.nowPlayingCollection.reloadData()
+                self.nowPlayingTableView.reloadData()
             }
-            self.nowPlayingCollection.reloadData()
-            self.nowPlayingTableView.reloadData()
+            else{
+                self.ErrorView.isHidden=false
+            }
+            MBProgressHUD.hide(for: self.view, animated: true)
 
-           MBProgressHUD.hide(for: self.view, animated: true)
+      
         });
         task.resume()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      
         let destinationViewController = segue.destination as! MovieDetailViewController
-        let cellCollection = sender as! UICollectionViewCell
-        let cellTable=sender as! UITableViewCell
-        let indexPathCollection = self.nowPlayingCollection!.indexPath(for: cellCollection)
-        let indexPathTable=self.nowPlayingTableView!.indexPath(for: cellTable)
-        //let movie  = self.filteredNowPlayingMovies[(indexPathCollection?.row)!]
-        let movie  = self.filteredNowPlayingMovies[(indexPathTable?.row)!]
+        let movie:Movie
+        if(list==true){
+            let cellTable=sender as! UITableViewCell
+            let indexPathTable=self.nowPlayingTableView!.indexPath(for: cellTable)
+            movie  = self.filteredNowPlayingMovies[(indexPathTable?.row)!]
+        }
+        else{
+            let cellCollection = sender as! UICollectionViewCell
+            let indexPathCollection = self.nowPlayingCollection!.indexPath(for: cellCollection)
+            movie  = self.filteredNowPlayingMovies[(indexPathCollection?.row)!]
+
+        }
         destinationViewController.movie=movie
     
     }

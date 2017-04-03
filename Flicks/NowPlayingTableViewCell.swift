@@ -9,8 +9,9 @@
 import UIKit
 
 class NowPlayingTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak var movieTitle: UILabel!
+
+    @IBOutlet weak var moviePosterImage: UIImageView!
     @IBOutlet weak var movieImage: UIImageView!
- 
+    @IBOutlet weak var movieTitle: UILabel!
+    @IBOutlet weak var movieRating: UILabel!
 }

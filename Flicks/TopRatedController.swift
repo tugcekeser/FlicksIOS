@@ -130,7 +130,7 @@ class TopRatedController: UIViewController, UICollectionViewDelegate,UICollectio
         )
         
         MBProgressHUD.showAdded(to: self.view, animated: true)
-        
+        filteredTopRatedMovies=[Movie]()
         let task : URLSessionDataTask = session.dataTask(with: request,completionHandler: { (dataOrNil, response, error) in
             if let data = dataOrNil {
                 if let responseDictionary = try! JSONSerialization.jsonObject(with: data, options:[]) as? NSDictionary {
